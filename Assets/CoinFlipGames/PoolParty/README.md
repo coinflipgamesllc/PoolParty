@@ -3,8 +3,8 @@
 
 Inspired pretty heavily from [quill-18's SimplePool](https://gist.github.com/quill18/5a7cfffae68892621267). The code has been cleaned up and two additional features have been added. 
 
-#. When calling `PoolParty.Destroy ()`, an optional time parameter can be added to destory it after a set period. This is closely in line with the default `GameObject.Destory ()` method.
-#. If your prefab includes a MonoBehaviour that implements the `PooledGameObject` interface, values can be automatically reset when the prefab is spawned. The `ResetEntity ()` method is called when the prefab is first created and whenever it is pulled from the pool.
+1. When calling `PoolParty.Destroy ()`, an optional time parameter can be added to destory it after a set period. This is closely in line with the default `GameObject.Destory ()` method.
+2. If your prefab includes a MonoBehaviour that implements the `PooledGameObject` interface, values can be automatically reset when the prefab is spawned. The `ResetEntity ()` method is called when the prefab is first created and whenever it is pulled from the pool.
 
 ### Usage:
 
