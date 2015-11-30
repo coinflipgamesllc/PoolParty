@@ -8,7 +8,7 @@ Inspired pretty heavily from [quill-18's SimplePool](https://gist.github.com/qui
 
 ### Usage:
 
-```
+```csharp
 using CoinFlipGames.PoolParty;
 using System.Collections;
 using UnityEngine;
@@ -35,7 +35,7 @@ public class MyMonoBehaviour : MonoBehaviour
 
 You can also automatically reset entity values when spawning if you declare a monobehaviour on your prefab like so:
 
-```
+```csharp
 public class PrefabBehaviour : MonoBehaviour, PooledEntity
 ```
 
