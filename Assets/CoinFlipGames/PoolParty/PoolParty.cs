@@ -147,7 +147,7 @@ namespace CoinFlipGames.PoolParty
 			// despawn them to place in the inactive stack
 			GameObject[] entities = new GameObject [amount];
 			for (int i = 0; i < amount; i++) {
-				entities [i] = Insantiate (prefab, Vector3.zero, Quaternion.identity);
+				entities [i] = Instantiate (prefab, Vector3.zero, Quaternion.identity);
 			}
 
 			for (int i = 0; i < amount; i++) {
@@ -158,12 +158,21 @@ namespace CoinFlipGames.PoolParty
 		/// <summary>
 		/// Spawn the prefab at the specified position and rotation.
 		/// </summary>
-		public static GameObject Insantiate (GameObject prefab, Vector3 position, Quaternion rotation)
+		public static GameObject Instantiate (GameObject prefab, Vector3 position, Quaternion rotation)
 		{
 			CreatePool (prefab);
 			return pools [prefab].Instantiate (position, rotation);
 		}
-		
+
+		/// <summary>
+		/// Spawn the prefab at the default position and rotation.
+		/// </summary>
+		public static GameObject Instantiate (GameObject prefab)
+		{
+			CreatePool (prefab);
+			return pools [prefab].Instantiate (Vector3.zero, Quaternion.identity);
+		}
+
 		/// <summary>
 		/// Despawn the specified prefab.
 		/// </summary>
